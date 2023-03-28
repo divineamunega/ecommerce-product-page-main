@@ -1,0 +1,16 @@
+@mixin font-weight($weigth){
+    @if $weigth == 'bold'{
+        font-weight: 700;
+    }
+    @else if $weigth == 'regular'{
+        font-weight: 400;
+    }
+}
+ 
+
+@mixin d-flex ($dir){
+    display: flex;
+    flex-direction: $dir;
+    align-items: center;
+    justify-content: center;
+}
