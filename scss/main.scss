@@ -6,24 +6,72 @@ body {
   height: 100vh;
   font-family: $font;
 }
+
+.d-flex{
+  display: flex;
+}
 nav {
-  width: 100%;
+  width: 90%;
   height: 10vh;
   border-bottom: 10px;
-  background-color: red;
-  @include d-flex(row)
+  @include d-flexcent(row);
+  margin: 0 auto;
+  border-bottom: 2px solid $secondaryColor3;
 
   .brand-name {
     width: 20%;
-    background-color: blue;
     height: 100%;
-    @include d-flex(column);
+    @include d-flexcent(column);
     font-size: 20px;
-    @include font-weight(bold)
+    @include font-weight(bold);
+    color: $secondaryColor1;
   }
    
   .nav-content{
     width:60%;
     height: 100%;
+
+    ul{
+      width: 70%;
+      @include d-flexcent(row);
+      height: 100%;
+
+      li{
+        margin: auto;
+        font-size: 16px;
+        cursor: pointer;
+        height: 100%;
+        @include d-flexcent(row);
+        transition: .3s;
+        border-bottom: 3px solid rgba(0,0,0,0);
+      a{
+        color: $secondaryColor2;
+      }
+        &:hover{
+          transition: .3s;
+          border-bottom: 3px solid $primaryColor1;
+        }
+      }
+    }
+  }
+
+  .other-content{
+    width:20%;
+    height: 100%;
+    @include d-flexcent(row);
+    img{
+      margin: 10px;
+    }
+    .avatar{
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(0,0,0,0);
+      border-radius: 50%;
+      transition: .3s;
+      &:hover{
+        border: 3px solid $primaryColor1;
+        transition: .3s;
+      }
+    }
   }
 }

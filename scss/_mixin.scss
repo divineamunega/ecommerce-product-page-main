@@ -8,7 +8,7 @@
 }
  
 
-@mixin d-flex ($dir){
+@mixin d-flexcent ($dir){
     display: flex;
     flex-direction: $dir;
     align-items: center;

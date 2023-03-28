@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -10,15 +11,23 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+.d-flex {
+  display: flex;
+}
+
 nav {
-  width: 100%;
+  width: 90%;
   height: 10vh;
   border-bottom: 10px;
-  background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-bottom: 2px solid hsl(220, 14%, 75%);
 }
 nav .brand-name {
   width: 20%;
-  background-color: blue;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -26,8 +35,58 @@ nav .brand-name {
   justify-content: center;
   font-size: 20px;
   font-weight: 700;
+  color: hsl(220, 13%, 13%);
 }
 nav .nav-content {
   width: 60%;
   height: 100%;
+}
+nav .nav-content ul {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+nav .nav-content ul li {
+  margin: auto;
+  font-size: 16px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+}
+nav .nav-content ul li a {
+  color: hsl(219, 9%, 45%);
+}
+nav .nav-content ul li:hover {
+  transition: 0.3s;
+  border-bottom: 3px solid hsl(26, 100%, 55%);
+}
+nav .other-content {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+nav .other-content img {
+  margin: 10px;
+}
+nav .other-content .avatar {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+nav .other-content .avatar:hover {
+  border: 3px solid hsl(26, 100%, 55%);
+  transition: 0.3s;
 }/*# sourceMappingURL=main.css.map */
