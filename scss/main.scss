@@ -171,12 +171,38 @@ main{
         font-family: $font;
         font-size: 16px;
       }
+
       h1{
         font-family: $font;
         font-size: 3em;
       }
+
       .support-text{
         font-family: $font;
+        font-size: 16px;
+        color: $secondaryColor2;
+        line-height: 25px;
+      }
+
+      .price-box{
+        @include d-flex(row);
+        height: 50px;
+        align-items: center;
+      }
+      .price,.discount{
+        @include d-flexcent(column)
+      }
+      .price{
+        font-size: 1.5em;
+        font-family: $font;
+        @include font-weight(bold);
+        margin-right: 20px;
+      }
+      .discount{
+        background-color:$primaryColor2;
+        height: 30px;
+        font-family: $font;
+
       }
   }
 }

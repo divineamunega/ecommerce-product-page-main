@@ -188,4 +188,30 @@ main .half h1 {
 }
 main .half .support-text {
   font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  color: hsl(219, 9%, 45%);
+  line-height: 25px;
+}
+main .half .price-box {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+}
+main .half .price, main .half .discount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .half .price {
+  font-size: 1.5em;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  margin-right: 20px;
+}
+main .half .discount {
+  background-color: hsl(25, 100%, 94%);
+  height: 30px;
+  font-family: "Kumbh Sans", sans-serif;
 }/*# sourceMappingURL=main.css.map */
