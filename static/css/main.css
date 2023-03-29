@@ -109,4 +109,31 @@ nav .other-content .avatar {
 nav .other-content .avatar:hover {
   border: 3px solid hsl(26, 100%, 55%);
   transition: 0.3s;
+}
+
+main {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media (min-width: 769px) {
+  main {
+    padding: 50px 70px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+main .half {
+  width: 50%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */

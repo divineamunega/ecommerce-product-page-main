@@ -1,6 +1,7 @@
 @import "variables";
 @import "reset";
 @import "mixin";
+@import "responsiveness";
 
 body {
   height: 100vh;
@@ -96,5 +97,30 @@ nav {
         transition: 0.3s;
       }
     }
+  }
+}
+
+main{
+  height: 90vh;
+  width: 100%;
+  @include d-flexcent(row); // Display flex
+  gap: 20px;
+  @include respond-to (desktop){
+    padding:50px 70px;
+  }
+
+  @include respond-to(phone){
+    @include d-flexcent(column);
+  }
+
+  .half{
+    width: 50%;
+    height: 100%;
+    @include respond-to(phone){
+
+    }
+
+    
+
   }
 }
