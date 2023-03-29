@@ -133,7 +133,7 @@ main {
     padding: 50px 90px;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 768px) {
   main {
     display: flex;
     flex-direction: column;
@@ -225,4 +225,43 @@ main .half .price-box .discount {
 main .half .price-box .old-price {
   text-decoration: line-through;
   color: hsl(220, 14%, 75%);
+}
+main .half .button-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  margin-top: 30px;
+}
+main .half .button-box .item-value-box {
+  height: 45px;
+  width: 33%;
+  border-radius: 10px;
+  background-color: hsl(220, 14%, 75%);
+}
+main .half .button-box .add-to-cart-btn {
+  border-radius: 10px;
+  background: hsl(26, 100%, 55%);
+  width: 66%;
+  height: 45px;
+  border: none;
+  box-shadow: 1px 2px 10px 0px hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  transition: 0.5s;
+  font-weight: 700;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .half .button-box .add-to-cart-btn::first-letter {
+  left: 30px;
+}
+main .half .button-box .add-to-cart-btn:active {
+  transition: 0.5s;
+  transform: scale(0.9);
 }/*# sourceMappingURL=main.css.map */
