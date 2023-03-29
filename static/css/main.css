@@ -197,21 +197,32 @@ main .half .price-box {
   flex-direction: row;
   height: 50px;
   align-items: center;
+  margin-bottom: 0;
 }
-main .half .price, main .half .discount {
+main .half .price-box .price,
+main .half .price-box .discount {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-main .half .price {
+main .half .price-box .price {
   font-size: 1.5em;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 700;
   margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
-main .half .discount {
+main .half .price-box .discount {
   background-color: hsl(25, 100%, 94%);
   height: 30px;
   font-family: "Kumbh Sans", sans-serif;
+  padding: 5px 10px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+main .half .price-box .old-price {
+  text-decoration: line-through;
+  color: hsl(220, 14%, 75%);
 }/*# sourceMappingURL=main.css.map */

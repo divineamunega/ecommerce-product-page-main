@@ -11,12 +11,11 @@ body {
 .d-flex {
   display: flex;
 }
-.img100{
-  
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        border-radius: inherit;
+.img100 {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
 }
 nav {
   width: 90%;
@@ -76,7 +75,6 @@ nav {
     .cart-cont {
       position: relative;
 
-      
       .badge {
         display: none !important;
         position: absolute;
@@ -107,38 +105,36 @@ nav {
   }
 }
 
-main{
+main {
   height: 90vh;
   width: 100%;
   @include d-flexcent(row); // Display flex
   gap: 200px;
-  @include respond-to (desktop){
-    padding:50px 90px;
+  @include respond-to(desktop) {
+    padding: 50px 90px;
   }
 
-  @include respond-to(phone){
+  @include respond-to(phone) {
     @include d-flexcent(column);
   }
 
-  .half{
+  .half {
     width: 50%;
     height: 100%;
     @include d-flex(column);
     justify-content: center;
     gap: 20px;
 
-    @include respond-to(phone){
-
+    @include respond-to(phone) {
     }
 
-    .pic-cont{
+    .pic-cont {
       height: 80%;
       border-radius: 20px;
       width: 100%;
-      
     }
 
-    .pic-thumbnail-cont{
+    .pic-thumbnail-cont {
       width: 100%;
       // @include d-flexcent(row);
       height: 20%;
@@ -146,14 +142,14 @@ main{
       gap: 10px;
       cursor: pointer;
 
-      .pic-thumbnail{
+      .pic-thumbnail {
         width: 20%;
         height: 100%;
         border-radius: 10px;
         position: relative;
       }
-      
-      .active{
+
+      .active {
         background-color: rgba(255, 255, 255, 0.432);
         z-index: 3;
         width: 100%;
@@ -164,45 +160,56 @@ main{
       }
     }
 
-    
-      .introductory-text{
-        text-transform: uppercase;
-        color: $primaryColor1;
-        font-family: $font;
-        font-size: 16px;
-      }
+    .introductory-text {
+      text-transform: uppercase;
+      color: $primaryColor1;
+      font-family: $font;
+      font-size: 16px;
+    }
 
-      h1{
-        font-family: $font;
-        font-size: 3em;
-      }
+    h1 {
+      font-family: $font;
+      font-size: 3em;
+    }
 
-      .support-text{
-        font-family: $font;
-        font-size: 16px;
-        color: $secondaryColor2;
-        line-height: 25px;
-      }
+    .support-text {
+      font-family: $font;
+      font-size: 16px;
+      color: $secondaryColor2;
+      line-height: 25px;
+    }
 
-      .price-box{
-        @include d-flex(row);
-        height: 50px;
-        align-items: center;
+    .price-box {
+      @include d-flex(row);
+      height: 50px;
+      align-items: center;
+      margin-bottom: 0;
+
+      .price,
+      .discount {
+        @include d-flexcent(column);
       }
-      .price,.discount{
-        @include d-flexcent(column)
-      }
-      .price{
+      .price {
         font-size: 1.5em;
         font-family: $font;
         @include font-weight(bold);
         margin-right: 20px;
+        margin-bottom: 10px;
+        margin-top: 30px;
       }
-      .discount{
-        background-color:$primaryColor2;
+      .discount {
+        background-color: $primaryColor2;
         height: 30px;
         font-family: $font;
-
+        padding: 5px 10px;
+        @include font-weight(bold);
+        border-radius: 10px;
       }
+
+      .old-price {
+        text-decoration: line-through;
+        color: $secondaryColor3;
+      }
+    }
   }
 }
