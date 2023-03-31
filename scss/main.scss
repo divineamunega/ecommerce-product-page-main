@@ -70,13 +70,13 @@ nav {
     img {
       margin: 10px;
       cursor: pointer;
+      
     }
 
     .cart-cont {
       position: relative;
 
       .badge {
-        display: none !important;
         position: absolute;
         width: 25px;
         height: 15px;
@@ -87,6 +87,26 @@ nav {
         @include d-flexcent(row);
         color: $secondaryColor5;
         @include font-weight(bold);
+      }
+
+      .basket{
+        width: 300px;
+        height: 250px;
+        display: none;
+        background-color: white;
+        position: absolute;
+        left: -100px;
+        top: 70px;
+        z-index: 3;
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.185);
+
+        .cart-head-box{
+          height: 50px;
+          padding: 0 15px;
+          align-items: center;
+          border-bottom: 1px solid $secondaryColor3;
+        }
       }
     }
 
@@ -356,5 +376,5 @@ main {
 }
 
 .hidden{
-  display: none;
+  display: none !important;
 }
