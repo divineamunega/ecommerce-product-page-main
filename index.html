@@ -113,9 +113,23 @@
         </div>
         <div class="button-box">
           <div class="item-value-box">
-            <svg width="12" height="4"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
-              <p class="number">0</p>
-            <svg width="12" height="12"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg>
+            <svg width="12" height="4">
+              <defs>
+                <path
+                  d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                  id="a" />
+              </defs>
+              <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+            </svg>
+            <p class="number">0</p>
+            <svg width="12" height="12">
+              <defs>
+                <path
+                  d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                  id="b" />
+              </defs>
+              <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+            </svg>
           </div>
           <button class="add-to-cart-btn">
             <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -125,49 +139,77 @@
                 fill-rule="nonzero" />
             </svg>
             &nbsp &nbsp &nbsp
-            <p>
-              Add to cart
-            </p>
+            <p>Add to cart</p>
           </button>
         </div>
       </div>
     </main>
 
-    <div class="overlay">
+    <div class="overlay hidden">
       <div class="pic-cont">
-          <img src="images/image-product-1.jpg" class="img100" alt="" />
-        </div>
-        <div class="pic-thumbnail-cont d-flex">
-          <div class="pic-thumbnail">
-            <div class="active white-overlay"></div>
-            <img
-              src="images/image-product-1-thumbnail.jpg"
-              class="img100"
-              alt="" />
-          </div>
-          <div class="pic-thumbnail">
-            <div class="white-overlay"></div>
-            <img
-              src="images/image-product-2-thumbnail.jpg"
-              class="img100"
-              alt="" />
-          </div>
-          <div class="pic-thumbnail">
-            <div class="white-overlay"></div>
-            <img
-              src="images/image-product-3-thumbnail.jpg"
-              class="img100"
-              alt="" />
-          </div>
-          <div class="pic-thumbnail">
-            <div class="white-overlay"></div>
-            <img
-              src="images/image-product-4-thumbnail.jpg"
-              class="img100"
-              alt="" />
-          </div>
-        </div>
-    </div>
+        <button class="btn-close">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill-rule="evenodd" />
+          </svg>
+        </button>
+        <img src="images/image-product-1.jpg" class="img100" alt="" />
 
+        <button class="prev btn-slide">
+          <svg width="12" height="18" class="previous">
+            <path
+              d="M11 1 3 9l8 8"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd" />
+          </svg>
+        </button>
+
+        <button class="next btn-slide">
+          <svg
+            width="13"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+            class="next">
+            <path
+              d="m2 1 8 8-8 8"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <div class="pic-thumbnail-cont d-flex">
+        <div class="pic-thumbnail">
+          <div class="active white-overlay"></div>
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            class="img100"
+            alt="" />
+        </div>
+        <div class="pic-thumbnail">
+          <div class="white-overlay"></div>
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            class="img100"
+            alt="" />
+        </div>
+        <div class="pic-thumbnail">
+          <div class="white-overlay"></div>
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            class="img100"
+            alt="" />
+        </div>
+        <div class="pic-thumbnail">
+          <div class="white-overlay"></div>
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            class="img100"
+            alt="" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>

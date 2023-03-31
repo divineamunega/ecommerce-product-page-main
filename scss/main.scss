@@ -268,19 +268,62 @@ main {
   background-color: rgba(0, 0, 0, 0.753);
   z-index: 5;
   @include d-flexcent(column);
+  backdrop-filter: blur(10px);
 
   .pic-cont{
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 420px;
+    position: relative;
     img{
       width: 100%;
       height: 100%;
       border-radius: 10px;
     }
+    button{
+      position: absolute;
+      @include d-flexcent(row);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-slide{
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $secondaryColor5;
+      transform: translateY(-50%);
+
+      &:hover svg{
+        stroke: $primaryColor1;
+      }
+      svg{
+        stroke:#1D2026;
+      }
+    }
+    .next{
+      right: -15px;
+    }
+    .prev{
+      left: -15px;
+    }
+
+    .btn-close{
+      position: absolute;
+      top: -20px;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0);
+      svg{
+        fill: $secondaryColor5;
+
+        &:hover{
+          fill: $primaryColor1;
+        }
+      }
+    }
   }
 
   .pic-thumbnail-cont{
-    width: 450px;
+    width: 400px;
     cursor: pointer;
     justify-content: space-around;
     margin-top: 20px;
@@ -292,14 +335,26 @@ main {
         position: relative;
       }
 
-      .active {
-        background-color: rgba(255, 255, 255, 0.432);
+      .white-overlay {
         z-index: 3;
         width: 100%;
         height: 100%;
         position: absolute;
         border-radius: 10%;
+
+        &:hover{
+          background-color: rgba(255, 255, 255, 0.432);
+          
+        }
+      }
+      .active{
+        background-color: rgba(255, 255, 255, 0.432);
         border: 2px solid $primaryColor1;
+        
       }
   }
+}
+
+.hidden{
+  display: none;
 }
