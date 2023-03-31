@@ -144,18 +144,23 @@ main {
   align-items: center;
   justify-content: center;
   gap: 200px;
+  padding: 50px 90px;
 }
-@media (min-width: 769px) {
+@media screen and (max-width: 991px) {
   main {
-    padding: 50px 90px;
+    padding: 30px 25px;
+    gap: 20px;
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0;
   }
 }
 main .half {
@@ -166,10 +171,20 @@ main .half {
   justify-content: center;
   gap: 20px;
 }
+@media (max-width: 576px) {
+  main .half {
+    width: 100%;
+  }
+}
 main .half .pic-cont {
   height: 80%;
   border-radius: 20px;
   width: 100%;
+}
+@media screen and (max-width: 576px) {
+  main .half .pic-cont {
+    border-radius: 0px;
+  }
 }
 main .half .pic-thumbnail-cont {
   width: 100%;
