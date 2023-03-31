@@ -28,11 +28,16 @@ nav {
   height: 10vh;
   border-bottom: 10px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   border-bottom: 2px solid hsl(220, 14%, 75%);
+}
+@media screen and (max-width: 576px) {
+  nav {
+    justify-content: space-around;
+    border-bottom: none;
+  }
 }
 nav .brand-name {
   width: 20%;
@@ -49,8 +54,13 @@ nav .nav-content {
   width: 60%;
   height: 100%;
 }
+@media screen and (max-width: 991px) {
+  nav .nav-content {
+    display: none;
+  }
+}
 nav .nav-content ul {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -58,7 +68,7 @@ nav .nav-content ul {
   height: 100%;
 }
 nav .nav-content ul li {
-  margin: auto;
+  margin: 0 auto;
   font-size: 16px;
   cursor: pointer;
   height: 100%;
@@ -184,6 +194,7 @@ main .half .pic-cont {
 @media screen and (max-width: 576px) {
   main .half .pic-cont {
     border-radius: 0px;
+    height: 250px;
   }
 }
 main .half .pic-thumbnail-cont {
@@ -192,6 +203,11 @@ main .half .pic-thumbnail-cont {
   justify-content: space-between;
   gap: 10px;
   cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+  main .half .pic-thumbnail-cont {
+    display: none;
+  }
 }
 main .half .pic-thumbnail-cont .pic-thumbnail {
   width: 20%;

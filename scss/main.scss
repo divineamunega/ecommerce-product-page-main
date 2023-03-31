@@ -21,9 +21,16 @@ nav {
   width: 90%;
   height: 10vh;
   border-bottom: 10px;
-  @include d-flexcent(row);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   border-bottom: 2px solid $secondaryColor3;
+
+  @include max-device(phone){
+    justify-content: space-around;
+    border-bottom: none;
+  }
 
   .brand-name {
     width: 20%;
@@ -38,13 +45,17 @@ nav {
     width: 60%;
     height: 100%;
 
+    @include max-device(tablet){
+      display: none;
+    }
+
     ul {
-      width: 70%;
+      width: 100%;
       @include d-flexcent(row);
       height: 100%;
 
       li {
-        margin: auto;
+        margin: 0 auto;
         font-size: 16px;
         cursor: pointer;
         height: 100%;
@@ -166,7 +177,7 @@ main {
 
       @include max-device(phone){
         border-radius: 0px;
-
+        height: 250px;
       }
     }
 
@@ -177,6 +188,10 @@ main {
       justify-content: space-between;
       gap: 10px;
       cursor: pointer;
+
+      @include max-device(phone){
+        display: none;
+      }
 
       .pic-thumbnail {
         width: 20%;
