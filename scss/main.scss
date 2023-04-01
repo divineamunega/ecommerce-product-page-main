@@ -169,12 +169,13 @@ main {
 
     @include max-device(tablet){
       width: 100%;
-      height: 50%;
+      height: 100%;
     }
 
     &:nth-child(2){
-      @include max-device(phone){
+      @include respond-to(phone){
         padding: 0 20px;
+        margin-bottom: 50px;
       }
     }
     .pic-cont {
@@ -185,6 +186,10 @@ main {
       @include max-device(phone){
         border-radius: 0px;
         height: 250px;
+      }
+
+      @include respond-to(tablet){
+        height: 70%;
       }
     }
 
@@ -232,6 +237,10 @@ main {
       @include max-device(phone){
         font-size: 2em;
       }
+
+      @include max-device(tablet){
+        font-size: 2.5em;
+      }
     }
 
     .support-text {
@@ -242,6 +251,10 @@ main {
 
       @include max-device(phone){
         font-size: 14px
+      }
+
+      @include max-device(tablet){
+        font-size: 15px
       }
     }
 
