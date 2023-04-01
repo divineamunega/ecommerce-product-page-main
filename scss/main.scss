@@ -8,6 +8,11 @@ body {
   font-family: $font;
 }
 
+*::selection{
+  background-color: black;
+  color: white;
+}
+
 .d-flex {
   display: flex;
 }
@@ -221,6 +226,10 @@ main {
     h1 {
       font-family: $font;
       font-size: 3em;
+
+      @include max-device(phone){
+        font-size: 2em;
+      }
     }
 
     .support-text {

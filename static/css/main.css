@@ -11,6 +11,16 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+*::-moz-selection {
+  background-color: black;
+  color: white;
+}
+
+*::selection {
+  background-color: black;
+  color: white;
+}
+
 .d-flex {
   display: flex;
 }
@@ -233,6 +243,11 @@ main .half .introductory-text {
 main .half h1 {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 3em;
+}
+@media screen and (max-width: 576px) {
+  main .half h1 {
+    font-size: 2em;
+  }
 }
 main .half .support-text {
   font-family: "Kumbh Sans", sans-serif;
