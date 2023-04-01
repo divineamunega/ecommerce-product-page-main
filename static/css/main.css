@@ -379,17 +379,30 @@ main .half .button-box .add-to-cart-btn:active {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-.overlay .pic-cont {
+
+.modal {
+  position: fixed;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+  z-index: 5;
+}
+.modal .pic-cont {
   width: 400px;
   height: 420px;
   position: relative;
 }
-.overlay .pic-cont img {
+.modal .pic-cont img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-.overlay .pic-cont button {
+.modal .pic-cont button {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -398,7 +411,7 @@ main .half .button-box .add-to-cart-btn:active {
   cursor: pointer;
   border: none;
 }
-.overlay .pic-cont .btn-slide {
+.modal .pic-cont .btn-slide {
   top: 50%;
   width: 40px;
   height: 40px;
@@ -406,53 +419,53 @@ main .half .button-box .add-to-cart-btn:active {
   background-color: hsl(0, 0%, 100%);
   transform: translateY(-50%);
 }
-.overlay .pic-cont .btn-slide:hover svg {
+.modal .pic-cont .btn-slide:hover svg {
   stroke: hsl(26, 100%, 55%);
 }
-.overlay .pic-cont .btn-slide svg {
-  stroke: #1D2026;
+.modal .pic-cont .btn-slide svg {
+  stroke: #1d2026;
 }
-.overlay .pic-cont .next {
+.modal .pic-cont .next {
   right: -15px;
 }
-.overlay .pic-cont .prev {
+.modal .pic-cont .prev {
   left: -15px;
 }
-.overlay .pic-cont .btn-close {
+.modal .pic-cont .btn-close {
   position: absolute;
   top: -20px;
   right: 0;
   background-color: rgba(0, 0, 0, 0);
 }
-.overlay .pic-cont .btn-close svg {
+.modal .pic-cont .btn-close svg {
   fill: hsl(0, 0%, 100%);
 }
-.overlay .pic-cont .btn-close svg:hover {
+.modal .pic-cont .btn-close svg:hover {
   fill: hsl(26, 100%, 55%);
 }
-.overlay .pic-thumbnail-cont {
+.modal .pic-thumbnail-cont-modal {
   width: 400px;
   cursor: pointer;
   justify-content: space-around;
   margin-top: 20px;
 }
-.overlay .pic-thumbnail-cont .pic-thumbnail {
+.modal .pic-thumbnail-cont-modal .pic-thumbnail-modal {
   width: 20%;
   height: 100%;
   border-radius: 10px;
   position: relative;
 }
-.overlay .pic-thumbnail-cont .white-overlay {
+.modal .pic-thumbnail-cont-modal .white-overlay-modal {
   z-index: 3;
   width: 100%;
   height: 100%;
   position: absolute;
   border-radius: 10%;
 }
-.overlay .pic-thumbnail-cont .white-overlay:hover {
+.modal .pic-thumbnail-cont-modal .white-overlay-modal:hover {
   background-color: rgba(255, 255, 255, 0.432);
 }
-.overlay .pic-thumbnail-cont .active {
+.modal .pic-thumbnail-cont-modal .active {
   background-color: rgba(255, 255, 255, 0.432);
   border: 2px solid hsl(26, 100%, 55%);
 }

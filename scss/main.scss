@@ -8,7 +8,7 @@ body {
   font-family: $font;
 }
 
-*::selection{
+*::selection {
   background-color: black;
   color: white;
 }
@@ -32,8 +32,8 @@ nav {
   margin: 0 auto;
   border-bottom: 2px solid $secondaryColor3;
 
-  @include max-device(tablet){
-    justify-content:space-between;
+  @include max-device(tablet) {
+    justify-content: space-between;
     border-bottom: none;
   }
 
@@ -50,7 +50,7 @@ nav {
     width: 60%;
     height: 100%;
 
-    @include max-device(tablet){
+    @include max-device(tablet) {
       display: none;
     }
 
@@ -86,7 +86,6 @@ nav {
     img {
       margin: 10px;
       cursor: pointer;
-
     }
 
     .cart-cont {
@@ -105,7 +104,7 @@ nav {
         @include font-weight(bold);
       }
 
-      .basket{
+      .basket {
         width: 300px;
         height: 250px;
         display: none;
@@ -117,7 +116,7 @@ nav {
         border-radius: 10px;
         box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.185);
 
-        .cart-head-box{
+        .cart-head-box {
           height: 50px;
           padding: 0 15px;
           align-items: center;
@@ -148,17 +147,16 @@ main {
   gap: 200px;
   padding: 50px 90px;
 
-  @include max-device(tablet){
+  @include max-device(tablet) {
     padding: 30px 25px;
     gap: 20px;
   }
 
-  @include max-device(phone){
+  @include max-device(phone) {
     @include d-flexcent(column);
     height: fit-content;
     padding: 0;
   }
-  
 
   .half {
     width: 50%;
@@ -167,13 +165,13 @@ main {
     justify-content: center;
     gap: 20px;
 
-    @include max-device(tablet){
+    @include max-device(tablet) {
       width: 100%;
       height: 100%;
     }
 
-    &:nth-child(2){
-      @include respond-to(phone){
+    &:nth-child(2) {
+      @include respond-to(phone) {
         padding: 0 20px;
         margin-bottom: 50px;
       }
@@ -183,12 +181,12 @@ main {
       border-radius: 20px;
       width: 100%;
 
-      @include max-device(phone){
+      @include max-device(phone) {
         border-radius: 0px;
         height: 250px;
       }
 
-      @include respond-to(tablet){
+      @include respond-to(tablet) {
         height: 70%;
       }
     }
@@ -201,7 +199,7 @@ main {
       gap: 10px;
       cursor: pointer;
 
-      @include max-device(phone){
+      @include max-device(phone) {
         display: none;
       }
 
@@ -234,11 +232,11 @@ main {
       font-family: $font;
       font-size: 3em;
 
-      @include max-device(phone){
+      @include max-device(phone) {
         font-size: 2em;
       }
 
-      @include max-device(tablet){
+      @include max-device(tablet) {
         font-size: 2.5em;
       }
     }
@@ -249,12 +247,12 @@ main {
       color: $secondaryColor2;
       line-height: 25px;
 
-      @include max-device(phone){
-        font-size: 14px
+      @include max-device(phone) {
+        font-size: 14px;
       }
 
-      @include max-device(tablet){
-        font-size: 15px
+      @include max-device(tablet) {
+        font-size: 15px;
       }
     }
 
@@ -307,8 +305,8 @@ main {
         align-items: center;
         padding: 0 20px;
 
-        svg{
-          cursor:pointer;
+        svg {
+          cursor: pointer;
         }
       }
 
@@ -327,7 +325,7 @@ main {
         font-size: 1.1em;
         @include d-flexcent(row);
 
-        &::first-letter{
+        &::first-letter {
           left: 30px;
         }
         &:active {
@@ -339,7 +337,7 @@ main {
   }
 }
 
-.overlay{
+.overlay {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -348,24 +346,33 @@ main {
   z-index: 5;
   @include d-flexcent(column);
   backdrop-filter: blur(10px);
-
-  .pic-cont{
+}
+.modal {
+  position: fixed;
+  width: fit-content;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  height: fit-content;
+  display: block;
+  z-index: 5;
+  .pic-cont {
     width: 400px;
     height: 420px;
     position: relative;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       border-radius: 10px;
     }
-    button{
+    button {
       position: absolute;
       @include d-flexcent(row);
       cursor: pointer;
       border: none;
     }
-    .btn-slide{
+    .btn-slide {
       top: 50%;
       width: 40px;
       height: 40px;
@@ -373,68 +380,66 @@ main {
       background-color: $secondaryColor5;
       transform: translateY(-50%);
 
-      &:hover svg{
+      &:hover svg {
         stroke: $primaryColor1;
       }
-      svg{
-        stroke:#1D2026;
+      svg {
+        stroke: #1d2026;
       }
     }
-    .next{
+    .next {
       right: -15px;
     }
-    .prev{
+    .prev {
       left: -15px;
     }
 
-    .btn-close{
+    .btn-close {
       position: absolute;
       top: -20px;
       right: 0;
       background-color: rgba(0, 0, 0, 0);
-      svg{
+      svg {
         fill: $secondaryColor5;
 
-        &:hover{
+        &:hover {
           fill: $primaryColor1;
         }
       }
     }
   }
 
-  .pic-thumbnail-cont{
+  .pic-thumbnail-cont-modal {
     width: 400px;
     cursor: pointer;
     justify-content: space-around;
     margin-top: 20px;
 
-    .pic-thumbnail {
-        width: 20%;
-        height: 100%;
-        border-radius: 10px;
-        position: relative;
-      }
+    .pic-thumbnail-modal {
+      width: 20%;
+      height: 100%;
+      border-radius: 10px;
+      position: relative;
+    }
 
-      .white-overlay {
-        z-index: 3;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        border-radius: 10%;
+    .white-overlay-modal {
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 10%;
 
-        &:hover{
-          background-color: rgba(255, 255, 255, 0.432);
-          
-        }
-      }
-      .active{
+      &:hover {
         background-color: rgba(255, 255, 255, 0.432);
-        border: 2px solid $primaryColor1;
-        
       }
+    }
+    .active {
+      background-color: rgba(255, 255, 255, 0.432);
+      border: 2px solid $primaryColor1;
+    }
   }
 }
 
-.hidden{
+.hidden {
   display: none !important;
 }
