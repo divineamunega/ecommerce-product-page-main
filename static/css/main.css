@@ -191,9 +191,15 @@ main .half {
   justify-content: center;
   gap: 20px;
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 991px) {
   main .half {
     width: 100%;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .half:nth-child(2) {
+    padding: 0 20px;
   }
 }
 main .half .pic-cont {
@@ -254,6 +260,11 @@ main .half .support-text {
   font-size: 16px;
   color: hsl(219, 9%, 45%);
   line-height: 25px;
+}
+@media screen and (max-width: 576px) {
+  main .half .support-text {
+    font-size: 14px;
+  }
 }
 main .half .price-box {
   display: flex;
