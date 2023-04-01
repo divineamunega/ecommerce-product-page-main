@@ -32,8 +32,8 @@ nav {
   margin: 0 auto;
   border-bottom: 2px solid $secondaryColor3;
 
-  @include max-device(phone){
-    justify-content: space-around;
+  @include max-device(tablet){
+    justify-content:space-between;
     border-bottom: none;
   }
 

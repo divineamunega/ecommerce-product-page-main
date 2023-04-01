@@ -43,9 +43,9 @@ nav {
   margin: 0 auto;
   border-bottom: 2px solid hsl(220, 14%, 75%);
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991px) {
   nav {
-    justify-content: space-around;
+    justify-content: space-between;
     border-bottom: none;
   }
 }
