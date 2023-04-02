@@ -371,7 +371,7 @@ main .half .button-box .add-to-cart-btn:active {
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.753);
-  z-index: 5;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
