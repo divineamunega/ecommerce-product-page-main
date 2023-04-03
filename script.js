@@ -12,7 +12,83 @@ const btnSliderNext = document.querySelector(".next");
 const btnSliderPrev = document.querySelector(".prev");
 
 // Functions
-const removeWhiteOverlay = function () {
+const showModal = function () {
+  overlay.classList.remove("hidden");
+  modal.classList.remove("hidden");
+};
+
+const hideModal = () => {
+  overlay.classList.add("hidden");
+  modal.classList.add("hidden");
+};
+
+hideModal();
+
+imgModal.addEventListener(`click`, showModal); // Showing the modal
+
+overlay.addEventListener(`click`, hideModal); // Hiding the modal on click of the overlay
+btnCloseModal.addEventListener(`click`, hideModal); // Hiding the modal on click of the close btn
+
+window.addEventListener(`keydown`, function (e) {
+  if ((e.key = `Escape`)) {
+    hideModal();
+  }
+});
+
+const removeClass = function (e) {
+  for (let i = 0; i < e.length; i++) {
+    e[i].classList.remove("active");
+  }
+};
+
+for (let i = 0; i < imgThumb.length; i++) {
+  const showImage = function () {
+    imgModal.src = `images/image-product-${i + 1}.jpg`;
+    imgOverlay.src = `images/image-product-${i + 1}.jpg`;
+    removeClass(whiteOverlay);
+    removeClass(whiteOverlayModal);
+    whiteOverlay[i].classList.add("active");
+    whiteOverlayModal[i].classList.add("active");
+  };
+
+  imgThumb[i].addEventListener(`click`, showImage);
+
+  imgThumbModal[i].addEventListener(`click`, showImage);
+}
+
+let slidervalue = 0;
+
+btnSliderNext.addEventListener(`click`, function () {
+  if (slidervalue === 3) {
+    slidervalue = 0;
+  } else if (slidervalue < 3) {
+    slidervalue += 1;
+  }
+  imgModal.src = `images/image-product-${slidervalue + 1}.jpg`;
+  imgOverlay.src = `images/image-product-${slidervalue + 1}.jpg`;
+  removeClass(whiteOverlay);
+  removeClass(whiteOverlayModal);
+  whiteOverlay[slidervalue].classList.add("active");
+  whiteOverlayModal[slidervalue].classList.add("active");
+});
+
+btnSliderPrev.addEventListener(`click`, function () {
+  if (slidervalue === 0) {
+    slidervalue = 3;
+  } else if (slidervalue > 0) {
+    slidervalue--;
+  }
+
+  imgModal.src = `images/image-product-${slidervalue + 1}.jpg`;
+  imgOverlay.src = `images/image-product-${slidervalue + 1}.jpg`;
+  removeClass(whiteOverlay);
+  removeClass(whiteOverlayModal);
+  whiteOverlay[slidervalue].classList.add("active");
+  whiteOverlayModal[slidervalue].classList.add("active");
+});
+
+/* const removeWhiteOverlay = function () {
+
   whiteOverlay.forEach((_, i) => whiteOverlay[i].classList.remove(`active`));
   whiteOverlayModal.forEach((_, i) =>
     whiteOverlayModal[i].classList.remove(`active`)
@@ -78,3 +154,5 @@ btnSliderNext.addEventListener(`click`, function () {
 });
 // changeImg();
 // changeImg(imgThumbModal);
+
+ */
