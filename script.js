@@ -70,6 +70,12 @@ btnSliderNext.addEventListener(`click`, function () {
   removeClass(whiteOverlayModal);
   whiteOverlay[slidervalue].classList.add("active");
   whiteOverlayModal[slidervalue].classList.add("active");
+  whiteOverlayModal[slidervalue].classList.add("active");
+  whiteOverlayModal[slidervalue].classList.add("active");
+  whiteOverlayModal[slidervalue].classList.add("active");
+  whiteOverlayModal[slidervalue].classList.add("active");
+  whiteOverlayModal[slidervalue].classList.add("active");
+  whiteOverlayModal[slidervalue].classList.add("active");
 });
 
 btnSliderPrev.addEventListener(`click`, function () {
