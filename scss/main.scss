@@ -404,16 +404,12 @@ main {
 
         &:hover {
           fill: $primaryColor1;
+          content: "";
         }
       }
     }
   }
 
-
-
-
-
-  
   .pic-thumbnail-cont-modal {
     width: 400px;
     cursor: pointer;

@@ -442,6 +442,7 @@ main .half .button-box .add-to-cart-btn:active {
 }
 .modal .pic-cont .btn-close svg:hover {
   fill: hsl(26, 100%, 55%);
+  content: "";
 }
 .modal .pic-thumbnail-cont-modal {
   width: 400px;
