@@ -10,6 +10,9 @@ const whiteOverlay = document.querySelectorAll(".white-overlay");
 const whiteOverlayModal = document.querySelectorAll(".white-overlay-modal");
 const btnSliderNext = document.querySelector(".next");
 const btnSliderPrev = document.querySelector(".prev");
+const itemValueSubtract = document.querySelector('.value-plus');
+const itemValueAdd = document.querySelector('.value-minus');
+const number = document.querySelector('.number');
 
 // Functions
 const showModal = function () {
@@ -70,12 +73,6 @@ btnSliderNext.addEventListener(`click`, function () {
   removeClass(whiteOverlayModal);
   whiteOverlay[slidervalue].classList.add("active");
   whiteOverlayModal[slidervalue].classList.add("active");
-  whiteOverlayModal[slidervalue].classList.add("active");
-  whiteOverlayModal[slidervalue].classList.add("active");
-  whiteOverlayModal[slidervalue].classList.add("active");
-  whiteOverlayModal[slidervalue].classList.add("active");
-  whiteOverlayModal[slidervalue].classList.add("active");
-  whiteOverlayModal[slidervalue].classList.add("active");
 });
 
 btnSliderPrev.addEventListener(`click`, function () {
@@ -92,6 +89,13 @@ btnSliderPrev.addEventListener(`click`, function () {
   whiteOverlay[slidervalue].classList.add("active");
   whiteOverlayModal[slidervalue].classList.add("active");
 });
+
+
+let cartValue = 0
+itemValueAdd.addEventListener('click', function(){
+  cartValue++;
+  number.textContent = cartValue;
+})
 
 /* const removeWhiteOverlay = function () {
 
