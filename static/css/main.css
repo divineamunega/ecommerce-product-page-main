@@ -156,6 +156,14 @@ nav .other-content .cart-cont .basket .cart-empty {
   font-weight: bold;
   font-family: "Kumbh Sans", sans-serif;
 }
+nav .other-content .cart-cont .basket .cart-item {
+  display: flex;
+  flex-direction: row;
+}
+nav .other-content .cart-cont .basket .cart-item img {
+  width: 50px;
+  height: 50px;
+}
 nav .other-content .avatar {
   width: 50px;
   height: 50px;
