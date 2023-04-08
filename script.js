@@ -10,9 +10,13 @@ const whiteOverlay = document.querySelectorAll(".white-overlay");
 const whiteOverlayModal = document.querySelectorAll(".white-overlay-modal");
 const btnSliderNext = document.querySelector(".next");
 const btnSliderPrev = document.querySelector(".prev");
-const itemValueSubtract = document.querySelector('.value-plus');
-const itemValueAdd = document.querySelector('.value-minus');
-const number = document.querySelector('.number');
+const itemValueSubtract = document.querySelector(".value-plus");
+const itemValueAdd = document.querySelector(".value-minus");
+const number = document.querySelector(".number");
+const openCart = document.querySelector(`.cart-image`);
+const cart = document.querySelector(`.basket`);
+
+cart.classList.add(`hidden`);
 
 // Functions
 const showModal = function () {
@@ -90,12 +94,22 @@ btnSliderPrev.addEventListener(`click`, function () {
   whiteOverlayModal[slidervalue].classList.add("active");
 });
 
-
-let cartValue = 0
-itemValueAdd.addEventListener('click', function(){
+let cartValue = 0;
+itemValueAdd.addEventListener("click", function () {
   cartValue++;
   number.textContent = cartValue;
-})
+});
+
+itemValueSubtract.addEventListener(`click`, function () {
+  cartValue > 0 ? cartValue-- : cartValue = 0;
+  number.textContent = cartValue;
+});
+
+openCart.addEventListener(`click`, function () {
+  cart.classList.toggle("hidden");
+});
+
+
 
 /* const removeWhiteOverlay = function () {
 
