@@ -128,7 +128,8 @@ nav .other-content .cart-cont .badge {
 }
 nav .other-content .cart-cont .basket {
   width: 300px;
-  height: 250px;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: white;
   position: absolute;
   left: -100px;
@@ -190,6 +191,23 @@ nav .other-content .cart-cont .basket .cart-item .cart-info .price-info span {
 nav .other-content .cart-cont .basket .cart-item .cart-info .price-info .total-price {
   color: hsl(0, 0%, 0%);
   font-weight: 700;
+}
+nav .other-content .cart-cont .basket .checkoutBtn {
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  width: 90%;
+  display: block;
+  color: hsl(0, 0%, 100%);
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.4s;
+  cursor: pointer;
+}
+nav .other-content .cart-cont .basket .checkoutBtn:active {
+  transform: scale(0.9);
+  transition: 0.4s;
 }
 nav .other-content .avatar {
   width: 50px;
