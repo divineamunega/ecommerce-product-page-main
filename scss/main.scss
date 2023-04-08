@@ -137,8 +137,8 @@ nav {
         .cart-item{
           @include d-flex(row);
           align-items: center;
+          justify-content: space-around;
           height: 60px;
-          background-color: red;
 
           img{
             width: 50px;
@@ -153,7 +153,35 @@ nav {
             border: none;
             cursor: pointer;
           }
+
+          .cart-info{
+
+
+            .cart-text{
+              font-size: 14px;
+              font-weight: 600;
+              color: $secondaryColor2;
+              margin-bottom: 3px;
+            }
+
+
+            .price-info{
+              // width: 75%;
+              // justify-content: space-around;
+              color: $secondaryColor2;
+              span{
+                margin: 0px 5px;
+              }
+
+              .total-price{
+                color: $secondaryColor6;
+                font-weight: 700;
+              }
+            }
+          }
         }
+
+        
 
       
       }

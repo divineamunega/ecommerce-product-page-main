@@ -160,8 +160,8 @@ nav .other-content .cart-cont .basket .cart-item {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   height: 60px;
-  background-color: red;
 }
 nav .other-content .cart-cont .basket .cart-item img {
   width: 50px;
@@ -174,6 +174,22 @@ nav .other-content .cart-cont .basket .cart-item button {
   height: 50px;
   border: none;
   cursor: pointer;
+}
+nav .other-content .cart-cont .basket .cart-item .cart-info .cart-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(219, 9%, 45%);
+  margin-bottom: 3px;
+}
+nav .other-content .cart-cont .basket .cart-item .cart-info .price-info {
+  color: hsl(219, 9%, 45%);
+}
+nav .other-content .cart-cont .basket .cart-item .cart-info .price-info span {
+  margin: 0px 5px;
+}
+nav .other-content .cart-cont .basket .cart-item .cart-info .price-info .total-price {
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
 }
 nav .other-content .avatar {
   width: 50px;
