@@ -15,6 +15,8 @@ const itemValueAdd = document.querySelector(".value-minus");
 const number = document.querySelector(".number");
 const openCart = document.querySelector(`.cart-image`);
 const cart = document.querySelector(`.basket`);
+const addToCart = document.querySelector(`.add-to-cart-btn`);
+const cartContent = document.querySelector(`.cart-content`)
 
 cart.classList.add(`hidden`);
 
@@ -109,7 +111,11 @@ openCart.addEventListener(`click`, function () {
   cart.classList.toggle("hidden");
 });
 
-
+addToCart.addEventListener(`click`,function(){
+  cartContent.firstChild
+  console.log(cartContent.firstChild)
+  console.log(cartContent.appendChild)
+})
 
 /* const removeWhiteOverlay = function () {
 
