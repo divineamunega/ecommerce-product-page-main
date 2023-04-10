@@ -145,11 +145,15 @@ addToCart.addEventListener(`click`, function () {
                 </button>
               </div>`;
   }
+
+  const deleteBtn = document.querySelector(".deleteBtn");
+  deleteBtn.addEventListener(`click`, function () {
+    checkOutBtn.classList.add('hidden');
+    cartContent.innerHTML = `<p class="cart-empty">
+                You do not have any items in the cart
+              </p>`;
+  });
 });
-
-
-
-
 
 /* const removeWhiteOverlay = function () {
 
